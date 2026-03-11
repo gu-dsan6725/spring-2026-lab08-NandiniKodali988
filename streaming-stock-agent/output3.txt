@@ -1,0 +1,52 @@
+warning: `VIRTUAL_ENV=/usr` does not match the project environment path `/home/ubuntu/dsan6725/spring-2026-lab08-NandiniKodali988/.venv` and will be ignored; use `--active` to target the active environment instead
+Testing /ping endpoint...
+Status: 200
+Response: {'status': 'ok'}
+
+============================================================
+MULTI-TURN CONVERSATION TEST
+============================================================
+
+Session: test_session_123
+Query: What is the current price of Apple stock?
+------------------------------------------------------------
+
+[Tool calls starting...]
+
+[Calling tool: get_stock_price with args {'ticker': 'AAPL'}]
+[Tool calls completed]
+
+The current price of Apple Inc. (AAPL) is **$260.81**, as of 9:37 PM market state ("POST"). 
+
+- **Previous Close:** $260.83  
+- **Change:** -\$0.02 (-0.01%)  
+
+*Data from Yahoo Finance, with a potential slight delay.*
+[Done]
+
+============================================================
+
+Session: test_session_123
+Query: How has it changed in the last 30 days?
+------------------------------------------------------------
+
+[Tool calls starting...]
+
+[Calling tool: get_stock_history with args {'days': 30, 'ticker': 'AAPL'}]
+[Tool calls completed]
+
+
+[Error: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `qwen/qwen3-32b` in organization `org_01kemgee7repers812s5hwqzhb` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5230, Requested 1031. Please try again in 2.61s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+]
+
+============================================================
+
+Session: test_session_123
+Query: What about Tesla?
+------------------------------------------------------------
+
+[Error: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `qwen/qwen3-32b` in organization `org_01kemgee7repers812s5hwqzhb` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5224, Requested 852. Please try again in 760ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+]
+
+============================================================
+

@@ -143,6 +143,58 @@ def _get_stock_history(
         }
 
 
+def _compare_stocks(
+    symbol1: str,
+    symbol2: str
+) -> Dict[str, Any]:
+    """Compare two stocks side-by-side.
+
+    Args:
+        symbol1: First stock symbol (e.g., 'AAPL')
+        symbol2: Second stock symbol (e.g., 'MSFT')
+
+    Returns:
+        Dictionary with comparison data for both stocks
+    """
+    try:
+        def _get_stock_summary(symbol: str) -> Dict[str, Any]:
+            stock = yf.Ticker(symbol.upper())
+            info = stock.info
+            current_price = info.get('currentPrice') or info.get('regularMarketPrice')
+            market_cap = info.get('marketCap')
+            if market_cap:
+                if market_cap >= 1_000_000_000_000:
+                    market_cap_str = f"{market_cap / 1_000_000_000_000:.1f}T"
+                elif market_cap >= 1_000_000_000:
+                    market_cap_str = f"{market_cap / 1_000_000_000:.1f}B"
+                else:
+                    market_cap_str = f"{market_cap / 1_000_000:.1f}M"
+            else:
+                market_cap_str = None
+            return {
+                "symbol": symbol.upper(),
+                "current_price": round(current_price, 2) if current_price else None,
+                "company_name": info.get('longName', symbol.upper()),
+                "market_cap": market_cap_str
+            }
+
+        stock1 = _get_stock_summary(symbol1)
+        stock2 = _get_stock_summary(symbol2)
+
+        return {
+            "comparison": {
+                "symbol1": symbol1.upper(),
+                "symbol2": symbol2.upper(),
+                "stock1": stock1,
+                "stock2": stock2
+            }
+        }
+
+    except Exception as e:
+        logger.error(f"Error comparing stocks {symbol1} and {symbol2}: {e}")
+        return {"error": str(e)}
+
+
 def _get_company_info(
     ticker: str
 ) -> Dict[str, Any]:
@@ -230,6 +282,25 @@ STOCK_TOOLS = [
             "required": ["ticker"]
         },
         "function": _get_company_info
+    },
+    {
+        "name": "compare_stocks",
+        "description": "Compare two stocks side-by-side including current price, company name, and market cap. Use this when the user asks to compare two stocks or wants to know which of two stocks is better/bigger/cheaper.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "symbol1": {
+                    "type": "string",
+                    "description": "First stock symbol to compare (e.g., AAPL)"
+                },
+                "symbol2": {
+                    "type": "string",
+                    "description": "Second stock symbol to compare (e.g., MSFT)"
+                }
+            },
+            "required": ["symbol1", "symbol2"]
+        },
+        "function": _compare_stocks
     }
 ]
 
