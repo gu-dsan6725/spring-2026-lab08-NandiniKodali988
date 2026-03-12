@@ -10,9 +10,9 @@ __pycache__/
 venv/
 
 # Data files (generated during runtime)
-data/raw_data/*.json
-data/agent_outputs/*.json
-data/final_report.txt
+#data/raw_data/*.json
+#data/agent_outputs/*.json
+#data/final_report.txt
 
 # IDE
 .vscode/

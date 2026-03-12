@@ -1,0 +1,40 @@
+{
+  "card_name": "john_doe_credit_card",
+  "card_type": "visa",
+  "date_range": "2026-01-01 to 2026-01-31",
+  "transactions": [
+    {"date": "2026-01-03", "merchant": "Amazon Prime", "category": "Subscription", "amount": -14.99, "recurring": true},
+    {"date": "2026-01-03", "merchant": "Shell Gas Station", "category": "Transportation", "amount": -58.50, "recurring": false},
+    {"date": "2026-01-05", "merchant": "Chevron", "category": "Transportation", "amount": -65.20, "recurring": false},
+    {"date": "2026-01-07", "merchant": "Panera Bread", "category": "Dining", "amount": -24.35, "recurring": false},
+    {"date": "2026-01-08", "merchant": "Starbucks", "category": "Dining", "amount": -12.50, "recurring": false},
+    {"date": "2026-01-09", "merchant": "Chipotle", "category": "Dining", "amount": -18.75, "recurring": false},
+    {"date": "2026-01-10", "merchant": "CVS Pharmacy", "category": "Health", "amount": -45.67, "recurring": false},
+    {"date": "2026-01-11", "merchant": "New York Times", "category": "Subscription", "amount": -29.99, "recurring": true},
+    {"date": "2026-01-12", "merchant": "Walgreens", "category": "Health", "amount": -32.50, "recurring": false},
+    {"date": "2026-01-13", "merchant": "Apple iCloud", "category": "Subscription", "amount": -9.99, "recurring": true},
+    {"date": "2026-01-14", "merchant": "Olive Garden", "category": "Dining", "amount": -56.75, "recurring": false},
+    {"date": "2026-01-15", "merchant": "Shell Gas Station", "category": "Transportation", "amount": -62.00, "recurring": false},
+    {"date": "2026-01-16", "merchant": "Best Buy", "category": "Electronics", "amount": -299.99, "recurring": false},
+    {"date": "2026-01-17", "merchant": "Uber", "category": "Transportation", "amount": -18.50, "recurring": false},
+    {"date": "2026-01-18", "merchant": "Lyft", "category": "Transportation", "amount": -22.75, "recurring": false},
+    {"date": "2026-01-19", "merchant": "Costco", "category": "Groceries", "amount": -167.43, "recurring": false},
+    {"date": "2026-01-20", "merchant": "Home Depot", "category": "Home Improvement", "amount": -134.67, "recurring": false},
+    {"date": "2026-01-21", "merchant": "Adobe Creative Cloud", "category": "Subscription", "amount": -29.99, "recurring": true},
+    {"date": "2026-01-22", "merchant": "Chick-fil-A", "category": "Dining", "amount": -15.25, "recurring": false},
+    {"date": "2026-01-23", "merchant": "Panda Express", "category": "Dining", "amount": -19.80, "recurring": false},
+    {"date": "2026-01-24", "merchant": "Chevron", "category": "Transportation", "amount": -55.30, "recurring": false},
+    {"date": "2026-01-25", "merchant": "ACME Corp", "category": "Unknown", "amount": -499.00, "recurring": false},
+    {"date": "2026-01-26", "merchant": "Target", "category": "Shopping", "amount": -87.32, "recurring": false},
+    {"date": "2026-01-27", "merchant": "AMC Theaters", "category": "Entertainment", "amount": -45.00, "recurring": false},
+    {"date": "2026-01-28", "merchant": "Barnes & Noble", "category": "Shopping", "amount": -42.50, "recurring": false},
+    {"date": "2026-01-29", "merchant": "Dominos Pizza", "category": "Dining", "amount": -28.50, "recurring": false},
+    {"date": "2026-01-30", "merchant": "Shell Gas Station", "category": "Transportation", "amount": -60.00, "recurring": false}
+  ],
+  "summary": {
+    "total_charges": 1957.19,
+    "recurring_charges": 84.96,
+    "transaction_count": 27,
+    "recurring_count": 4
+  }
+}
