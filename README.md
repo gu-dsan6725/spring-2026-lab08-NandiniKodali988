@@ -125,10 +125,10 @@ advanced-agentic-patterns/
 ### Problem 1: Streaming Stock Agent (50 points)
 
 **Deliverables**:
-- [ ] Implemented `_compare_stocks()` function in [agent.py](streaming-stock-agent/agent.py)
-- [ ] Tool schema added to `STOCK_TOOLS` list
-- [ ] Test output files: `output1.txt`, `output2.txt`, `output3.txt`
-- [ ] Code follows project standards (type hints, docstrings, error handling)
+- [x] Implemented `_compare_stocks()` function in [agent.py](streaming-stock-agent/agent.py)
+- [x] Tool schema added to `STOCK_TOOLS` list
+- [x] Test output files: `output1.txt`, `output2.txt`, `output3.txt`
+- [x] Code follows project standards (type hints, docstrings, error handling)
 
 **Evaluation Criteria**:
 - Correct tool schema definition (15 points)
@@ -139,15 +139,15 @@ advanced-agentic-patterns/
 ### Problem 2: Multi-Agent Financial Orchestrator (100 points)
 
 **Deliverables**:
-- [ ] Completed `financial_orchestrator.py` with all TODO sections implemented
-- [ ] Output files created:
+- [x] Completed `financial_orchestrator.py` with all TODO sections implemented
+- [x] Output files created:
   - `data/raw_data/bank_transactions.json`
   - `data/raw_data/credit_card_transactions.json`
   - `data/agent_outputs/research_results.md`
   - `data/agent_outputs/negotiation_scripts.md`
   - `data/agent_outputs/tax_analysis.md`
   - `data/final_report.md`
-- [ ] Code passes syntax validation
+- [x] Code passes syntax validation
 
 **Evaluation Criteria**:
 - Subscription detection implementation (10 points)
